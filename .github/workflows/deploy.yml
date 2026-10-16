@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: npm run build
   Deploy:
-    runs-on: uduntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy to Server
         run: echo "Deploying to server....."
