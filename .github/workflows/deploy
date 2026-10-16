@@ -1,0 +1,17 @@
+name: Test Demo
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run lint
+        run: npm run lint
+      - name: Run tests
+        run: npm test
+  Deploy:
+    runs-on: uduntu-latest
+    steps:
+      - name: Build Project
+        run: npm run build
+      - name: Deploy to Server
+        run: echo "Deploying to server..."
