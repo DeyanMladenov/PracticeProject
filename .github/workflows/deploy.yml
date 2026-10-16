@@ -12,14 +12,15 @@ jobs:
           node-version: 20
       - name: install dependencies
         run: npm ci
-      - name: Run lint
+      - name: Lint
         run: npm run lint
-      - name: Run tests
-        run: npm test
+      - name: Test
+        run: npm run test
+      - name: Build
+        run: npm run build
   Deploy:
+    needs: test
     runs-on: uduntu-latest
     steps:
-      - name: Build Project
-        run: npm run build
       - name: Deploy to Server
         run: echo "Deploying to server....."
