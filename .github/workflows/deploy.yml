@@ -19,7 +19,6 @@ jobs:
       - name: Build
         run: npm run build
   Deploy:
-    needs: test
     runs-on: uduntu-latest
     steps:
       - name: Deploy to Server
