@@ -1,0 +1,13 @@
+name: Output Event Details
+
+on:
+  issues:
+
+jobs:
+  output-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output event details
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
